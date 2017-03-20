@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js_demo2.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=GBK">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+<script language="javascript" src="/JavaScriptDemo/js/js_demo2.js"
+	type="text/javascript">
+</script>
+
+</head>
+
+<body onload="startRotate();">
+	<form>
+		<h2>1.输入验证</h2>
+		用户名（3到6位字母数字的组合）： <input type="text" id="txtName"
+			onblur="validateUserName();" /><br /> 电话号码（6位数字）： <input
+			type="text" id="txtPhone" onblur="validatePhone();" /><br />
+
+		<h2>2.Date对象：订单时段的查询</h2>
+		<input type="radio" id="chkThree" onclick="getDateRange(3);"
+			name="date" /> <label for="chkThree">三天内</label> <input type="radio"
+			id="chkWeek" onclick="getDateRange(7);" name="date" /> <label
+			for="chkWeek">一周内</label>
+
+		<h2>3.arguments:方法重载</h2>
+		<input type="button" value="计算平方" onclick="myMethod(12);" /> <input
+			type="button" value="计算和" onclick="myMethod(12,45);" />
+
+		<h2>4.Function对象和匿名函数</h2>
+		<input type="button" value="排序" onclick="sortArray();" />
+
+		<h2>5.eval方法：简单计算器</h2>
+		<input type="button" value="1" onclick="simpleCal(this.value);" /> <input
+			type="button" value="2" onclick="simpleCal(this.value);" /> <input
+			type="button" value="3" onclick="simpleCal(this.value);" /> <input
+			type="button" value="4" onclick="simpleCal(this.value);" /> <input
+			type="button" value="+" onclick="simpleCal(this.value);" /> <input
+			type="button" value="-" onclick="simpleCal(this.value);" /> <input
+			type="button" value="=" onclick="simpleCal(this.value);" /> <input
+			type="button" id="txtData"
+			style="font-size:15pt;border:1px solid gray;" />
+
+		<h2>6.对话框：删除操作的提交和取消</h2>
+		<input type="submit" value="删除" onclick="return delFunc();" />
+
+		<h2>7.动态时钟</h2>
+		<input type="button" value="显示时间" onclick="showTime();" /> <input
+			type="button" value="启动时钟" onclick="startClock();" /> <input
+			type="button" value="停止时钟" onclick="stopClock();"> <br /> <br />
+		<span id="spanTime" style="font-size:15px;"></span>
+		
+		<h2>8.页面定时跳转</h2>
+		<input type="button" value="5s后打开新页面" onclick="openwindowwait();"/>
+		如果想取消，请点击<a href="javascript:cancelOpen();">这里</a>
+		
+		<h2>9.广告轮播</h2>
+		<img id="img1" style="width:200px;" src="/JavaScriptDemo/images/rose.jpg"
+		onmouseover="stopRotate();"onmouseout="startRotate();"/>
+	</form>
+</body>
+</html>
